@@ -114,7 +114,7 @@ function compileLaTeXRoutine() {
     let status = _compileLaTeX();
     if (status === 0) {
         let pdfArrayBuffer = null;
-        _compileBibtex();
+        // _compileBibtex();
         let pdfurl = WORKROOT + "/" + self.mainfile.substr(0, self.mainfile.length - 4) + ".xdv";
         try {
             pdfArrayBuffer = FS.readFile(pdfurl, {
