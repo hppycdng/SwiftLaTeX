@@ -1,3 +1,9 @@
 *.o
+swiftlatexxetex.wasm
+swiftlatexxetex.js
+swiftlatexpdftex.wasm
+swiftlatexpdftex.js
+swiftlatexdvipdfm.js
+swiftlatexdvipdfm.wasm
 *.Identifier
 .texlive_tmp
