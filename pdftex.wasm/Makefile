@@ -3,7 +3,9 @@ CXX=em++
 DEBUGFLAGS = -O3 -s USE_ZLIB=1 -s USE_LIBPNG=1 -Wno-parentheses-equality -Wno-pointer-sign  -DWEBASSEMBLY_BUILD -fno-rtti -fno-exceptions
 
 CFLAGS = $(DEBUGFLAGS) 
-LDFLAGS =  $(DEBUGFLAGS) 
+LDFLAGS =  $(DEBUGFLAGS) \
+ -s EXPORTED_RUNTIME_METHODS='["cwrap", "allocate"]' \
+ -s EVAL_CTORS=1
 CXX_LINK = $(CXX) -o $@ $(LDFLAGS)
 
 texsources = tex/pdftex0.c tex/pdftexini.c tex/pdftex-pool.c main.c md5.c xmemory.c texfile.c kpseemu.c bibtex.c
