@@ -20,7 +20,7 @@ export enum EngineStatus {
     Error,
 }
 
-const XDVPDFMX_ENGINE_PATH = '/swiftlatexdvipdfm.js';
+const XDVPDFMX_ENGINE_PATH = '/swiftlatex/swiftlatexdvipdfm.js';
 
 export class CompileResult {
     pdf: Uint8Array | undefined = undefined;
